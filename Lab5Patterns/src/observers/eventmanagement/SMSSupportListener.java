@@ -14,7 +14,7 @@ public class SMSSupportListener implements EventListener{
     @Override
     public void update(String eventType, File file) {
         if(SMS.length()>160){            
-        System.out.printf("SMS [" + SMS + "]: Someone has performed " + eventType + 
+        System.out.printf("SMS [" + SMS + "]: is Too Long. Someone has performed " + eventType + 
                 " on file " + file.getName()+ "\n Give a valid  default SMS ");
       //  throw new Exception("Give a valid Default SMS");
         }
