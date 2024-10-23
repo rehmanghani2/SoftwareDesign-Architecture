@@ -1,17 +1,14 @@
 
 package observers.eventmanagement;
-
 import java.io.File;
-
-
 public class Editor {
     public EventManager events;
     private File file;
 
     public Editor() {
-        this.events = new EventManager("open", "save");
+        this.events = new EventManager("open", "save", "send");
     }
-
+    
     public void openFile(String filePath) {
         this.file = new File(filePath);
         events.notify("open", file);
@@ -23,5 +20,8 @@ public class Editor {
         } else {
             throw new Exception("Please open a file first.");
         }
+    }
+    public void sendMsg(){
+        events.notify("send", file);
     }
 }
