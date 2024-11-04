@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/F:/5th%20Semis/Software%20Design%20And%20Architecture/SDA/Lab5Patterns/src/observers/eventmanagement/EventManager.java</file>
-            <file>file:/F:/5th%20Semis/Software%20Design%20And%20Architecture/SDA/Lab5Patterns/src/observers/eventmanagement/LogOpenListener.java</file>
-            <file>file:/F:/5th%20Semis/Software%20Design%20And%20Architecture/SDA/Lab5Patterns/src/observers/eventmanagement/SMSSupportListener.java</file>
-            <file>file:/F:/5th%20Semis/Software%20Design%20And%20Architecture/SDA/Lab5Patterns/src/observers/eventmanagement/EmailNotificationListener.java</file>
-            <file>file:/F:/5th%20Semis/Software%20Design%20And%20Architecture/SDA/Lab5Patterns/src/observers/eventmanagement/Demo.java</file>
-            <file>file:/F:/5th%20Semis/Software%20Design%20And%20Architecture/SDA/Lab5Patterns/src/observers/eventmanagement/EventListener.java</file>
-            <file>file:/F:/5th%20Semis/Software%20Design%20And%20Architecture/SDA/Lab5Patterns/src/observers/eventmanagement/Editor.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
