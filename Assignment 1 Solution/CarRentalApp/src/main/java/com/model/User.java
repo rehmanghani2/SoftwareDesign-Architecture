@@ -36,7 +36,8 @@ public class User {
     }
 
     // Method to load user details from the database
-    private void loadUserDetails(String userID) {
+    public boolean loadUserDetails(String userID) {
+        boolean flag = false;
         String dbUrl = "jdbc:mysql://127.0.0.1:3306/carrentalapp"; // Replace with your database URL
         String dbUser = "root"; // Replace with your database username
         String dbPassword = "@hm@dz@i123"; // Replace with your database password
@@ -51,14 +52,18 @@ public class User {
                 this.name = resultSet.getString("name");
                 this.email = resultSet.getString("email");
                 this.contactNumber = resultSet.getString("contact_number");
+                 flag = true;
                 // Assuming a separate method or table exists for payment details
                 loadPaymentInfo(userID);
+               
             } else {
+                flag = false;
                 System.out.println("User not found with ID: " + userID);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return flag;
     }
 
     // Method to load payment information for the user

@@ -53,8 +53,8 @@ public class carDatabase {
                 double rentalPricePerDay = resultSet.getDouble("rentalPricePerDay");
                 String availabilityStatus = resultSet.getString("availabilityStatus");
                 String location = resultSet.getString("location");
-                
-                car = new Car(carID, model, rentalPricePerDay, availabilityStatus, location);
+                String imagePath = resultSet.getString("imagePath");
+                car = new Car(carID, model, rentalPricePerDay, availabilityStatus, location,imagePath);
             }
             
         } catch (Exception e) {

@@ -39,7 +39,7 @@ public class UserDatabase {
                 String contactNumber = rs.getString("contact_number");
               //  PaymentDetails paymentInfo = new PaymentDetails(rs.getString("paymentInfo"));
 
-             //   user = new User(userID, name, email, contactNumber, paymentInfo);
+                user = new User(userID, name, email, contactNumber);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -86,6 +86,31 @@ public class UserDatabase {
         }
         return false;
     }
+    // Method to get a user by their ID
+    public  boolean getUserByID(String userID) {
+       boolean user = false;
+        try {
+            String query = "SELECT * FROM users WHERE user_id = ?";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, userID);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String contactNumber = rs.getString("contact_number");
+                user = true;
+              //  PaymentDetails paymentInfo = new PaymentDetails(rs.getString("paymentInfo"));
+              
+             //   user = new User(userID, name, email, contactNumber, paymentInfo);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user;
+     }
+    
+    
     public static void main(String[] args)throws Exception {
         UserDatabase udb = new UserDatabase(DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/carrentalapp?user=root&password=@hm@dz@i123"));
         udb.addUser(new User("2","ghani","ghani@gmail.com","03010010000"));

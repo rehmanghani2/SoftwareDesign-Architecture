@@ -30,18 +30,20 @@ public class Car {
         this.carID = carID;
         loadCarDetails();
     }
-     public Car(String carID,String model,double rentalPricePerDay,String availabilityStatus,String location){
+     public Car(String carID,String model,double rentalPricePerDay,String availabilityStatus,String location, String imagePath){
          this.carID = carID;
          this.location=location;
          this.availabilityStatus= availabilityStatus;
          this.model = model;
+         this.imagePath = imagePath;
      }
-      public Car(String carID, String model, double rentalPricePerDay, String location) {
+      public Car(String carID, String model, double rentalPricePerDay, String location, String imagePath) {
         this.carID = carID;
         this.model = model;
         this.rentalPricePerDay = rentalPricePerDay;
         this.location = location;
-        this.availabilityStatus = availabilityStatus;       
+        this.availabilityStatus = availabilityStatus;    
+        this.imagePath = imagePath;
     }
     
 
@@ -97,7 +99,7 @@ public class Car {
 
     // Return car details
     public Car getDetails() {
-        return new Car(carID, model, rentalPricePerDay, location);
+        return new Car(carID, model, rentalPricePerDay, location,imagePath);
     }
 
     public String getImagePath() {

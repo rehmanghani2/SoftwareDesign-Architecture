@@ -55,14 +55,16 @@ import java.io.IOException;
 import java.util.Date;
 import main.java.com.model.Car;
 import main.java.com.model.CarDetails;
+import main.resources.carDatabase;
 
 public class CarDetailsGUI extends JFrame {
     private JLabel carImageLabel;
     private JLabel carDetailsLabel;
 
-    public CarDetailsGUI(Car car) {
+    public CarDetailsGUI(String carID) {
+        Car car = carDatabase.getCarById(carID);
         setTitle("Car Details");
-        setSize(600, 800);
+        setSize(500, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -80,7 +82,7 @@ public class CarDetailsGUI extends JFrame {
                         // "Availability: " + (car.checkAvailability("2/2/2003", "12/122024") ? "Available" : "Unavailable") +
                         //"Availability: " + (car.checkAvailability(new Date(), new Date()) ? "Available" : "Unavailable") +
                          "Availability: " + car.getAvailabilityStatus() + "<br>" +
-                         "RentalPricePerDay : " + car.getRentalPricePerDay() +
+                      //   "RentalPricePerDay : " + car.getRentalPricePerDay() +
                         "</html>";
         carDetailsLabel = new JLabel(details);
         carDetailsLabel.setVerticalAlignment(SwingConstants.TOP);
@@ -105,9 +107,11 @@ public class CarDetailsGUI extends JFrame {
 
     public static void main(String[] args) {
         // Example usage
-        Car car = new Car("c001");  // Assuming this car ID is present in the database
+          Car car = carDatabase.getCarById("c001");  // Assuming this car ID is present in the database
+        System.out.println(car);
+  
         System.out.println(car.getImagePath());
-        CarDetailsGUI frame = new CarDetailsGUI(car);
+        CarDetailsGUI frame = new CarDetailsGUI("c002");
         frame.setVisible(true);
     }
 }

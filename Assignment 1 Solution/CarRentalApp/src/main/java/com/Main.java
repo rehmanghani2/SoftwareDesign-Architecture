@@ -24,12 +24,12 @@ public class Main {
     public Main() {
         // Initialize main frame
         mainFrame = new JFrame("Car Rental Application");
-        mainFrame.setSize(600, 400);
+        mainFrame.setSize(1200, 600);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setLayout(new BorderLayout());
         
         JPanel headPanel = new JPanel(new BorderLayout());
-        headPanel.setForeground(Color.GREEN);
+        headPanel.setForeground(Color.ORANGE);
         JLabel heading = new JLabel("Car Rental App");
         heading.setFont(new Font("Times New Roman",Font.BOLD,24));
         heading.setForeground(Color.BLUE);
@@ -37,30 +37,41 @@ public class Main {
         // Create a menu bar
         JMenuBar menuBar = new JMenuBar();
         JMenu menu = new JMenu("Options");
-        
-        
-        
-        
+               
         // Create menu items
         JMenuItem registerUserItem = new JMenuItem("Register User");
         JMenuItem bookCarItem = new JMenuItem("Book a Car");
         JMenuItem viewCarsItem = new JMenuItem("View Cars");
         
         JPanel panel = new JPanel(new BorderLayout());
-
+        JPanel titlepanel = new JPanel();
+//        JLabel titleLabel = new JLabel("Car Rental App");       
+//        titleLabel.setFont(new Font("Times new roman",Font.ITALIC,40));
+//        titleLabel.setForeground(Color.DARK_GRAY);
+        
+        JLabel backgroundLabel = new JLabel(new ImageIcon("src/resources/images/GARIHAN/image1.jpg"));
+        backgroundLabel.setBounds(0,0, 800, 400);
+        titlepanel.setPreferredSize(new Dimension(900,500));
+        
+        titlepanel.setBackground(Color.ORANGE);
+      //  titlepanel.add(titleLabel).setPreferredSize(new Dimension(620,500));
+    //   titleLabel.setHorizontalAlignment(JLabel.CENTER);        
+        backgroundLabel.setHorizontalAlignment(JLabel.CENTER);
+        backgroundLabel.setVerticalAlignment(JLabel.CENTER);
+        titlepanel.add(backgroundLabel);
         //panel.setLayout();
         JButton registerBtn = new JButton("Register");
-        registerBtn.setFont(new Font("Arial",Font.BOLD,24));
+        registerBtn.setFont(new Font("Arial",Font.BOLD,30));
      //   registerBtn.setBackground(Color.yellow);
       //  registerBtn.setText("Register");
         
         JButton bookingBtn = new JButton("Book Car");
-        bookingBtn.setFont(new Font("Arial",Font.BOLD,24));
+        bookingBtn.setFont(new Font("Arial",Font.BOLD,40));
       //  registerBtn.setBackground(Color.yellow);
        // registerBtn.setText("Book Car");
         
-        JButton viewDetailsBtn = new JButton("View Car Details");
-        viewDetailsBtn.setFont(new Font("Arial",Font.BOLD,24));
+        JButton viewDetailsBtn = new JButton("View All Cars ");
+        viewDetailsBtn.setFont(new Font("Arial",Font.BOLD,30));
        // registerBtn.setBackground(Color.yellow);
         // registerBtn.setText("View Car Details");
         
@@ -97,8 +108,8 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
               //  CarDetailsGUI.showCarDetailsFrame();
-              Car car=  new Car("c001");
-              CarDetailsGUI cd=new CarDetailsGUI(car);
+             // Car car=  new Car("c001");
+              CarDetailsGUI cd=new CarDetailsGUI("c001");
               cd.setVisible(true);
              // cd.carDetialsView(car);
             }
@@ -107,8 +118,8 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                // CarDetailsGUI.showCarDetailsFrame();
-              Car car=  new Car("c001");
-              CarDetailsGUI cd=new CarDetailsGUI(car);
+             // Car car=  new Car("c001");
+              CarDetailsGUI cd=new CarDetailsGUI("c001");
               cd.setVisible(true);
             }
         });
@@ -129,16 +140,18 @@ public class Main {
       //  panel.add(heading,BorderLayout.PAGE_START);
         panel.add(registerBtn,BorderLayout.NORTH);
         panel.add(bookingBtn,BorderLayout.CENTER);
-        panel.add(viewDetailsBtn,BorderLayout.SOUTH);
-        panel.setPreferredSize(new Dimension(100, 200));
+       panel.add(viewDetailsBtn,BorderLayout.SOUTH);
+        panel.setPreferredSize(new Dimension(250, 200));
         // Set the menu bar
        
         mainFrame.setJMenuBar(menuBar);
-         mainFrame.getContentPane().add(headPanel);
+       //  mainFrame.getContentPane().add(headPanel);
        // mainFrame.add(heading);
-        mainFrame.getContentPane().add(panel);
+       mainFrame.getContentPane().add(titlepanel,BorderLayout.WEST);
+        mainFrame.getContentPane().add(panel,BorderLayout.EAST);
        // mainFrame.pack();
         // Show main frame
+        mainFrame.setLocationRelativeTo(null);
         mainFrame.setVisible(true);
     }
 

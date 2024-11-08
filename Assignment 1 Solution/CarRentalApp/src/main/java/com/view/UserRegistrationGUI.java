@@ -5,16 +5,17 @@
  */
 package main.java.com.view;
 
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
 import java.sql.DriverManager;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 import main.java.com.model.User;
 import main.resources.UserDatabase;
 
@@ -25,28 +26,34 @@ import main.resources.UserDatabase;
 public class UserRegistrationGUI {
     public static void showUserRegistrationFrame() {
         JFrame registrationFrame = new JFrame("User Registration");
-        registrationFrame.setSize(400, 300);
+        registrationFrame.setSize(600, 500);
         registrationFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         registrationFrame.setLayout(new GridLayout(5, 2));
-
+        
+         UIManager.put("OptionPane.font",new java.awt.Font("Arial",java.awt.Font.BOLD,30));
         // Form fields
         JTextField userIDField = new JTextField();
         JTextField nameField = new JTextField();
         JTextField emailField = new JTextField();
         JTextField contactField = new JTextField();
         JButton registerButton = new JButton("Register");
+        
 
         // Add fields to frame
-        registrationFrame.add(new JLabel("User ID:"));
-        registrationFrame.add(userIDField);
-        registrationFrame.add(new JLabel("Name:"));
+        registrationFrame.add(new JLabel("User ID:")).setFont(new Font("Arial",Font.BOLD,30));
+        registrationFrame.add(userIDField).setFont(new Font("Arial",Font.BOLD,30));
+        registrationFrame.add(new JLabel("Name:")).setFont(new Font("Arial",Font.BOLD,30));
         registrationFrame.add(nameField);
-        registrationFrame.add(new JLabel("Email:"));
+        registrationFrame.add(new JLabel("Email:")).setFont(new Font("Arial",Font.BOLD,30));
         registrationFrame.add(emailField);
-        registrationFrame.add(new JLabel("Contact Number:"));
+        registrationFrame.add(new JLabel("Contact Number:")).setFont(new Font("Arial",Font.BOLD,30));
         registrationFrame.add(contactField);
         registrationFrame.add(registerButton);
-
+        userIDField.setFont(new Font("Arial",Font.BOLD,30));
+        nameField.setFont(new Font("Arial",Font.BOLD,30));
+        emailField.setFont(new Font("Arial",Font.BOLD,30));
+        contactField.setFont(new Font("Arial",Font.BOLD,30));
+        registerButton.setFont(new Font("Arial",Font.BOLD,30));
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -68,7 +75,9 @@ public class UserRegistrationGUI {
                     System.out.println(error.toString());
                 }
                 if (userDatabase.addUser(newUser)) {
+                   
                     JOptionPane.showMessageDialog(registrationFrame, "User registered successfully!");
+                  //  JOptionPane.getRootFrame().setFont(new Font("Arial",Font.BOLD,30));
                 } else {
                     JOptionPane.showMessageDialog(registrationFrame, "Registration failed.");
                 }
