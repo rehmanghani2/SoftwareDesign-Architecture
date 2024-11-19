@@ -31,7 +31,7 @@ public class AdmissionProcess extends Subject {
 
     // Notify all observers
    // @Override
-    public void notifyObservers(String studentName) {
+    public void notifyObserver(String studentName) {
         for (Observer observer : observers) {
             observer.update(studentName, this);
         }
