@@ -9,8 +9,8 @@ package Business;
  *
  * @author Ghani
  */
-public class TestFilter extends Observer{
-  //  @Override
+public class TestFilter implements Observer{
+    @Override
     public void update(String studentName, AdmissionProcess admissionProcess) {
         System.out.println("EligibilityFilter: Checking eligibility for " + studentName);
         // Simple logic: Pass if the student's name length > 3

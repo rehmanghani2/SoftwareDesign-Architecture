@@ -7,31 +7,36 @@ package Business;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observer;
+import Business.Observer;
 
 /**
  *
  * @author Ghani
  */
-public class AdmissionProcess extends Subject {
-   private List<Observer> observers = new ArrayList<>();
+public  class AdmissionProcess implements Subject {
+   private List<Observer> observers = new ArrayList<>() ;
     private String currentStatus = ""; // Tracks the status of the student
-
+    
     // Add an observer to the list
-  //  @Override
+  // @Override
+    
     public void addObserver(Observer observer) {
         observers.add(observer);
     }
-
     // Remove an observer from the list
   //  @Override
     public void removeObserver(Observer observer) {
         observers.remove(observer);
     }
+//    public AdmissionProcess(){
+//        observers = new ArrayList<>();
+//        currentStatus = "";
+//    }
+    
 
     // Notify all observers
-   // @Override
-    public void notifyObservers(String studentName) {
+    @Override
+    public void notifyObserver(String studentName) {
         for (Observer observer : observers) {
             observer.update(studentName, this);
         }
@@ -49,6 +54,7 @@ public class AdmissionProcess extends Subject {
     // Trigger the admission process
     public void processApplication(String studentName) {
         setCurrentStatus("Application started");
-        notifyObservers(studentName);
+        notifyObserver(studentName);
     }
+   
 }

@@ -9,7 +9,9 @@ package Business;
  *
  * @author Ghani
  */
-public class EligibilityFilter extends Observer{
+public class EligibilityFilter implements Observer{
+
+
     @Override
     public void update(String studentName, AdmissionProcess admissionProcess) {
         System.out.println("EligibilityFilter: Checking eligibility for " + studentName);

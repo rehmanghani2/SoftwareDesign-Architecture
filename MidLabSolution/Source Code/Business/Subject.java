@@ -5,12 +5,13 @@
  */
 package Business;
 
+import Business.Observer;
 /**
  *
  * @author Ghani
  */
-public abstract class Subject {
-   public abstract void addObserver(Observer observer);
-   public abstract void removeObserver(Observer observer);
-   public abstract void notifyObserver(String message);
+public interface Subject {
+    void addObserver(Observer observer);
+    void removeObserver(Observer observer);
+    void notifyObserver(String message);
 }
