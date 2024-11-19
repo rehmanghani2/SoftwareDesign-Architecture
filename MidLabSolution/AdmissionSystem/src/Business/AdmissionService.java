@@ -18,7 +18,7 @@ public class AdmissionService {
         admissionProcess = new AdmissionProcess();
 
         // Register filters in order
-        admissionProcess.addObserver( new EligibilityFilter());
+        admissionProcess.addObserver(new EligibilityFilter());
         admissionProcess.addObserver(new TestFilter());
         admissionProcess.addObserver(new InterviewFilter());
         admissionProcess.addObserver( new MeritListFilter());

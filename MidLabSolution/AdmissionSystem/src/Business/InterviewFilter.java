@@ -9,7 +9,7 @@ package Business;
  *
  * @author Ghani
  */
-public class InterviewFilter extends Observer{
+public class InterviewFilter implements Observer{
      @Override
     public void update(String studentName, AdmissionProcess admissionProcess) {
         if ("Test Passed".equals(admissionProcess.getCurrentStatus())) {

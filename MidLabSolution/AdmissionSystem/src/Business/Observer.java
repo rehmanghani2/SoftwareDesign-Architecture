@@ -9,6 +9,6 @@ package Business;
  *
  * @author Ghani
  */
-public abstract class Observer {
-     public abstract void update(String studentName, AdmissionProcess admissionProcess);
+public interface Observer {
+     void update(String studentName, AdmissionProcess admissionProcess);
 }

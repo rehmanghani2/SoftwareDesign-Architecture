@@ -9,7 +9,7 @@ package Business;
  *
  * @author Ghani
  */
-public class MeritListFilter extends Observer {
+public class MeritListFilter implements Observer {
      @Override
     public void update(String studentName, AdmissionProcess admissionProcess) {
         if ("Eligible".equals(admissionProcess.getCurrentStatus())) {
