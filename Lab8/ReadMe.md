@@ -1,3 +1,22 @@
+ Clone the GitHub Repository
+Go to the GitHub repository of the project you want to run.
+
+Click on the green "Code" button and copy the HTTPS or SSH URL for cloning the repository. The URL will look like this:
+
+bash
+Copy code
+https://github.com/username/repository-name.git
+Open a terminal/command prompt on your local machine and run the following command to clone the repository:
+
+bash
+Copy code
+git clone https://github.com/username/repository-name.git
+Change to the directory of the cloned repository:
+
+bash
+Copy code
+cd repository-name
+
 ### **Description of the MVC Implementation**
 
 The Model-View-Controller (MVC) design pattern separates an application into three interconnected components to organize code effectively. Below is a detailed explanation of the MVC implementation for both **Java** and **Python** versions:
