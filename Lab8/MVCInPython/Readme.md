@@ -1,4 +1,4 @@
-Sure! Below is the implementation of a simple **Bookstore Project** using Django with the **MVC (Model-View-Controller)** design pattern, along with a **layered architecture**. This project will allow users to view a list of books, and in the admin panel, you can manage book entries (add, edit, delete).
+Below is the implementation of a simple **Bookstore Project** using Django with the **MVC (Model-View-Controller)** design pattern, along with a **layered architecture**. This project will allow users to view a list of books, and in the admin panel, you can manage book entries (add, edit, delete).
 
 ---
 
