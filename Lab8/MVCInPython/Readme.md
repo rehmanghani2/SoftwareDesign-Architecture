@@ -1,4 +1,4 @@
-###### To run project on your pc
+# To run project on your pc
 To run a Django project that you've cloned from GitHub, you'll need to follow these steps. This includes setting up the project on your local machine, installing dependencies, and running the development server. Below is a step-by-step guide to running a Django project from GitHub.
 
 ### **Step 1: Clone the Project from GitHub**
