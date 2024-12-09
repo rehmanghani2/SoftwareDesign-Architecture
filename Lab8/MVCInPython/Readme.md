@@ -9,9 +9,8 @@ To run a Django project that you've cloned from GitHub, you'll need to follow th
 2. **Clone the GitHub repository**:
    Open your terminal (Command Prompt, PowerShell, or Terminal) and navigate to the directory where you want to clone the project. Use the following command to clone the repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
+   git clone https://github.com/rehmanghani2/SoftwareDesign-Architecture
    ```
-   Replace `username/repository-name` with the appropriate GitHub repository URL.
 
 3. **Navigate into the project directory**:
    ```bash
