@@ -1,4 +1,4 @@
-                                  # JAVA VERSION HISTORY:
+#### JAVA VERSION HISTORY:
 The Java language has undergone several changes since JDK 1.0 as well as numerous additions 
 of classes and packages to the standard library. Since J2SE 1.4, the evolution of the Java 
 language has been governed by the Java Community Process (JCP), which uses Java Specification Requests (JSRs) to propose and specify additions and changes to the Java platform. The language is specified by the Java Language Specification (JLS); changes to the JLS are managed under JSR 901. In September 2017, Mark Reinhold, chief Architect of the Java Platform, proposed to change the release train to "one feature release every six months" rather than the then-current two-year schedule.[1][2] This proposal took effect for all following versions, and is still the current release schedule.
