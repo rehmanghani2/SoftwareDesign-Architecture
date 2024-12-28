@@ -81,7 +81,7 @@ public class BookingGUI {
                     String msg = "<html><body><font size='5'>Car booked successfully!</font></body></html>";
                     JOptionPane.showMessageDialog(bookingFrame, msg);
                     PaymentProcessor pp = new PaymentProcessor();
-                    JOptionPane.showMessageDialog(bookingFrame,"<html><body><font size='5'>Processing Payment</font></body></html>  ");
+                    JOptionPane.showMessageDialog(bookingFrame,"<html><body><font size='5'>Processing Payment</font></body></html>");
                     boolean isPaymentSuccessful = pp.processPayment(user.getPaymentInfo());
                     if(!isPaymentSuccessful || isPaymentSuccessful){
                         JOptionPane.showMessageDialog(bookingFrame,"<html><body><font size='5'>Payment Successful</font></body></html>");
